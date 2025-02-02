@@ -18,28 +18,28 @@ const ProductList = ({ filter, search }) => {
   useEffect(() => {
     if (products.length > 0) {
       setLoading(false);
-
+  
       // First, filter products based on the 'filter' prop (category)
       let filteredProducts = products;
-
+  
       // If filter is not "all", filter by category
       if (filter && filter !== "all") {
         filteredProducts = products.filter(product => 
           product.category.toLowerCase() === filter.toLowerCase()
         );
       }
-
+  
       // Then, apply the 'search' term to the filtered list
       if (search) {
         filteredProducts = filteredProducts.filter(product =>
           product.title.toLowerCase().includes(search.toLowerCase())
         );
       }
-
+  
       // Slice the filtered list for pagination (infinite scroll)
       const newProducts = filteredProducts.slice(0, productsPerPage * currentPage);
       setDisplayedProducts(newProducts);
-
+  
       if (newProducts.length >= filteredProducts.length) {
         setHasMore(false);
       }

@@ -5,12 +5,14 @@ import "../styles/sidebar.css";
 
 const Sidebar = ({ onFilter }) => {
   const { categories } = useProducts();
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category); // Update the selected category
     onFilter(category); // Call the onFilter function to filter products
   };
+
+  
 
   return (
     <List className="sidebar">
