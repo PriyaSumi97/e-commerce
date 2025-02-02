@@ -9,12 +9,30 @@
   float: left;
   min-height: 100vh;
 }
+
 .sidebar span {
   text-transform: capitalize;
   font-size: 18px;
 }
-.sidebar li{
+
+.sidebar li {
   cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.sidebar .selected {
+  background-color: #eee; 
+  color: #000; 
+}
+
+.sidebar li:hover {
+  background-color: #eee;
+}
+
+.sidebar li:active {
+  background-color: #ccc; /* Active state background */
 }
 
 @media screen and (max-width: 768px) {
@@ -23,8 +41,9 @@
     top: 50px;
     width: 100%;
     overflow: auto;
-    min-height:max-content;
+    min-height: max-content;
   }
+
   .sidebar span {
     font-size: 12px;
     display: inline-block;
@@ -34,7 +53,13 @@
     padding: 3px;
     border-radius: 8px;
   }
-  .sidebar li{
+
+  .sidebar li {
     padding: 10px 3px;
+  }
+
+  .sidebar .selected {
+    background: none !important;
+    color: #000;
   }
 }
