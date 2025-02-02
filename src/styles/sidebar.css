@@ -1,0 +1,40 @@
+.sidebar {
+  position: fixed !important;
+  left: 0;
+  top: 76px;
+  width: 18%;
+  z-index: 1;
+  background-color: #fff;
+  border-right: 1.5px solid #eee;
+  float: left;
+  min-height: 100vh;
+}
+.sidebar span {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.sidebar li{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: flex;
+    top: 50px;
+    width: 100%;
+    overflow: auto;
+    min-height:max-content;
+  }
+  .sidebar span {
+    font-size: 12px;
+    display: inline-block;
+    width: 108px;
+    background: #f2f2f2;
+    text-align: center;
+    padding: 3px;
+    border-radius: 8px;
+  }
+  .sidebar li{
+    padding: 10px 3px;
+  }
+}

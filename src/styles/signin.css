@@ -1,0 +1,53 @@
+/* .signin-page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.signin-page img{
+    width: 30px;
+    height: 30px;
+}
+
+.signin-logo-container img{
+    border: 1px solid #222;
+    padding: 10px;
+    border-radius: 50%;
+}
+.signin-logo-text{
+    display: flex;
+    align-items: center;
+    border: 1px solid #222;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+} */
+
+.login-container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width) {
+    .login-container h4{
+        font-size: 18px;
+    }
+    .login-container button{
+        font-size: 12px;
+    }
+}
+
+
