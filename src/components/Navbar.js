@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 const Navbar = ({ onSearch }) => {
   const navigate = useNavigate();
   const { user } = useAuth();
-  console.log(user?.photoURL, "user");
   const [open, setOpen] = useState(false);
 
   const handleClose = () => setOpen(false);
